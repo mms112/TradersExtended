@@ -398,6 +398,16 @@ namespace TradersExtended
 
             foreach (TradeableItem item in items)
             {
+                for (int i = 0; i < result.Count; i++)
+                {
+                    Trader.TradeItem tradeItem2 = result[i];
+                    if (tradeItem2.m_prefab.name == item.prefab)
+                    {
+                        result.RemoveAt(i);
+                        break;
+                    }
+                }
+
                 if (!item.IsItemToSell(trader))
                     continue;
 
