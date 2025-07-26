@@ -622,12 +622,37 @@ namespace TradersExtended
                 if (!modEnabled.Value)
                     return;
 
-                if (disableVanillaItems.Value)
-                    __result.Clear();
+                List<Trader.TradeItem> vanilla_items = new List<Trader.TradeItem>(__result);
+                __result.Clear();
 
                 AddAvailableItems(CommonListKey(ItemsListType.Buy), __result);
 
                 AddAvailableItems(TraderListKey(__instance, ItemsListType.Buy), __result);
+
+                if (!disableVanillaItems.Value)
+                {
+                    foreach (var vanilla_item in vanilla_items)
+                    {
+                        bool overwritten = false;
+                        foreach (var item in __result.ToList())
+                        {
+                            if (item.m_prefab.m_itemData.m_shared.m_name == vanilla_item.m_prefab.m_itemData.m_shared.m_name)
+                            {
+                                if (item.m_stack == 0)
+                                {
+                                    __result.Remove(item);
+                                }
+                                overwritten = true;
+                                break;
+                            }
+                        }
+
+                        if (!overwritten)
+                        {
+                            __result.Add(vanilla_item);
+                        }
+                    }
+                }
             }
         }
 
