@@ -120,7 +120,7 @@ namespace TradersExtended
 
         void OnDestroy()
         {
-            Config.Save();
+            //Config.Save(); Do not save the config, to keep the synced values
             instance = null;
             harmony?.UnpatchSelf();
         }
