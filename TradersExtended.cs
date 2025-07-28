@@ -194,7 +194,7 @@ namespace TradersExtended
             CoinsPatches.RestoreAll();
             configEditor?.Dispose();
             configEditor = null;
-            Config.Save();
+            //Config.Save(); Do not save the config, to keep the synced values
             harmony.UnpatchSelf();
             instance = null;
         }
