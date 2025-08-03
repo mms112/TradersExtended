@@ -40,9 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="$(SolutionDir)\Config\$(AssemblyName)\shudnal.$(AssemblyName)\shudnal.TradersExtended.haldor.buy.json" Link="Config\shudnal.TradersExtended.haldor.buy.json" />
-    <Content Include="$(SolutionDir)\Config\$(AssemblyName)\shudnal.$(AssemblyName)\shudnal.TradersExtended.haldor.sell.json" Link="Config\shudnal.TradersExtended.haldor.sell.json" />
-    <Content Include="$(SolutionDir)\Config\$(AssemblyName)\shudnal.$(AssemblyName)\shudnal.TradersExtended.bogwitch.sell.json" Link="Config\shudnal.TradersExtended.bogwitch.sell.json" />
+    <Content Include="$(SolutionDir)\Config\$(AssemblyName)\shudnal.$(AssemblyName)\*.*" Link="Config\%(FileName)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup>
