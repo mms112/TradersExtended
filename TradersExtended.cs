@@ -23,7 +23,7 @@ namespace TradersExtended
     {
         public const string pluginID = "shudnal.TradersExtended";
         public const string pluginName = "Traders Extended";
-        public const string pluginVersion = "1.3.11";
+        public const string pluginVersion = "1.3.12";
 
         private readonly Harmony harmony = new Harmony(pluginID);
 
@@ -552,7 +552,7 @@ namespace TradersExtended
 
             List<TradeableItem> items = itemsFromFile == null ? new List<TradeableItem>() : tradeableItems[listKey].Concat(itemsFromFile).ToList();
 
-            LogInfo($"Loaded {itemsFromFile.Count} tradeable item from {listKey}");
+            LogInfo($"Loaded {(itemsFromFile == null ? 0 : itemsFromFile.Count)} tradeable item from {listKey}");
 
             tradeableItems[listKey] = items;
         }
@@ -578,7 +578,7 @@ namespace TradersExtended
 
             List<TradeableItem> items = sellableItems[listKey].Concat(itemsFromFile).ToList();
 
-            LogInfo($"Loaded {itemsFromFile.Count} sellable item from {listKey}");
+            LogInfo($"Loaded {(itemsFromFile == null ? 0 : itemsFromFile.Count)} sellable item from {listKey}");
 
             sellableItems[listKey] = items;
         }
