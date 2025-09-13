@@ -14,6 +14,9 @@
     <PackageReference Include="ILRepack.Lib.MSBuild.Task">
       <Version>2.0.18.2</Version>
     </PackageReference>
+	<PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AzuExtendedPlayerInventoryAPI, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -24,10 +27,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Assemblies\API\ExtraSlotsAPI.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libs\Newtonsoft.Json.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServerSync\ServerSync.csproj" />
@@ -35,8 +34,6 @@
   <ItemGroup>
     <Content Include="Libs\AzuExtendedPlayerInventoryAPI.dll" />
     <Content Include="Libs\ExtraSlotsAPI.dll" />
-    <Content Include="Libs\Newtonsoft.Json.dll" />
-    <Content Include="Libs\ServerSync.dll" />
   </ItemGroup>
 
   <ItemGroup>

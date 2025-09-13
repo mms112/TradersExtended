@@ -1,3 +1,8 @@
+# 1.3.12
+* Call To Arms patch
+* fixed console error when loading empty JSON file
+* JSON.Net moved into dependency
+
 # 1.3.11
 * patch 0.220.3
 * ServerSync updated
