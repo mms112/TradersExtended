@@ -8,7 +8,6 @@
   <ItemGroup>
     <Content Include="Libs\AzuExtendedPlayerInventoryAPI.dll" />
     <Content Include="Libs\ExtraSlotsAPI.dll" />
-    <Content Include="Libs\Newtonsoft.Json.dll" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ILRepack.Lib.MSBuild.Task">
