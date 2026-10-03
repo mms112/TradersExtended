@@ -27,10 +27,12 @@ namespace TradersExtended
             public double createdAt;
             public int dataVersion;
             public SavedItem[] items;
+#pragma warning disable CS0649
             // Legacy Inventory.Save payloads remain readable, but are not written for new receipts.
             public string itemData;
             // Older records stored one representative item rather than every removed stack.
             public int[] itemAmounts;
+#pragma warning restore CS0649
             public StorePanel.ItemToSell.ItemType itemType;
             public int stack;
             public int price;
